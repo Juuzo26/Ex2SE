@@ -1,0 +1,36 @@
+﻿@page
+@model Ex2SE.Pages.BooksModel
+@{
+}
+<h2>Books</h2>
+<p>Below you see all the Books in the Book Store</p>
+<table>
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Publisher</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.listBooks)
+        {
+            <tr>
+                <th>@book.BookId</th>
+                <th>@book.Title</th>
+                <th>@book.ISBN</th>
+                <th>@book. PublisherName</th>
+                <th>@book.AuthorName</th>
+                <th>@book.CategoryName</th>
+                <th>
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary btn-sm">New Book</a>
